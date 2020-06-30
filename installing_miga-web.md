@@ -29,5 +29,5 @@ Next you need to create an account by entering your name, emal address and a pas
 - You have to create an account every time Miga-Web is restarted.
 - If you use the same email address, it won't let you.
 - Creating a new project, you are asked to enter a path, but only a name is accepted (alphanumeric and underscore).
-- I don't know what you can actually do once you have it running. Is everything lost once you stop the instance? Tun off your coputer?
+- I don't know what you can actually do once you have it running. Is everything lost once you stop the instance? Turn off your computer?
 - If I try to log in, the email and password boxes appear to be populated with my Miga Online info. This maybe because of how my browser identifies the site?
