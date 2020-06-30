@@ -1,6 +1,6 @@
-# Running MiGa Interactively
+# Running MiGA Interactively
 
-In most cases you will want to run MiGa by submitting batch jobs. But to gain some experience and see how thing work, you can run the following example interactively.  
+In most cases you will want to run MiGA by submitting batch jobs. But to gain some experience and see how thing work, you can run the following example interactively.  
 
 Log into the HPCC with your user name and password.  
 
@@ -15,19 +15,21 @@ tar
 Create a directory for your project and move into that directory, for example:  
 ```
 mkdir pseudo
-cd pseudo # Maybe not?
+cd pseudo # Maybe not? Seems I have to or the database cannot be added to the project.
 ```
-Start MiGa and create a new project named `pseudo`:  
+Start MiGA and create a new project named `pseudo`:  
 
 ```
-singularity shell MiGa
-miga new -P pseudo -t genomes
+singularity shell MiGA
+MiGA new -P ~/pseudo -t genomes
 ```
 The `-t` argument is needed to specify what kind of genomes you are working with.  Acceptable types are :  
 
 - `popgenome` for Metagenome-Assembled Genomes
 - `cgenome` for Single-Cell Amplified Genomes
-- `genome` for the genomes from isolates
+- `genomes` for the genomes from isolates
+
+**Problem: It seems only genomes is actually accepted.**
 
 For this example, we are using genomes from isolates.  
 
@@ -40,7 +42,7 @@ so the command is:
 ```
 miga edit -P . -m "/mnt/research/rdp/public/database/TypeMat/TypeMat_Lite"
 ```
-Add your data set to the MiGa project. To do this with the default parameters, enter:  
+Add your data set to the MiGA project. To do this with the default parameters, enter:  
 
 ```
 miga add -P . -t genome -i assembly ~/miga_genome/*.fasta
@@ -52,9 +54,9 @@ miga add -P . -t genome -i assembly ~/test_miga/*.fasta \
     -m run_mytaxa_scan=false, run_distances=false
 ```
 
-Afterall, in this case we did not include mytaxa in the insstallation.  
+Afterall, in this case we did not include mytaxa in the installation.  
 
-Launch daemon to start MiGA processing your data:  
+Launch the daemon to start MiGA processing your data:  
 
 ```
 miga daemon start -P .
@@ -62,5 +64,10 @@ miga daemon start -P .
 After the job starts, you can monitor its progress by entering:  
 
 ```
-ls
+miga ls -P . -p 
+```
+Display the dataset information:  
+
+```
+miga about -P .
 ```
