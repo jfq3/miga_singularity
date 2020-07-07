@@ -10,3 +10,5 @@ Related to installing MiGA on a Windows PC:
 - Installing_docker_in_windows.md
 - Installing_miga-web.md
 - run_clade_project.md
+ 
+./data/pseudomonads.zip - four genomes used in examples
