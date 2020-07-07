@@ -27,17 +27,6 @@ To start processing, you must turn on the daemon. Click on the green website ico
 
 Click on the green website icon in the upper right again, select **Dashboard**, and then **Query datasets** to see the progress of your analysis. 
 
-**Note:** A red circle with an X in it displayed next to a genome if processing for that genome is complete. 
-
-----
-This page does not seem to update automatically, or at least to lag significantly behind actual processing progress. Clicking on *Running* .
-
-*P alcaligenes*. Clicking on it took me to page indicating that the Dataset was inactive. Does this simply mean that it has finished processing? I clicked on the orange button to reactivate it. The screen goes white. I used the browser's back arrow to go back to a screen displaying something for that data set. This occurred again for *P aeruginosa*.
-
-**Note:** Information about the status of the analysis is confusing. On the left I see that of the 4 query datasets all are complete. In the upper right is an indication of "1 ready." Two of the genomes, *P fluorescens* and *P alcaligenes*, have red circles with X's next to them.
-
----
-
 Wait until processing for all genomes is complete. (This took about 10 minutes on my computer.) **Note:** The title bar still shows "3 ready." This always seems to lag behind the number of genomes that are "complete."
 
 Click on **Projects** in the title bar, and then **Public**. Click on the name of your project. The menu in the middle of the screen gives the results for your project. Try clicking on each, e.g. Project Progress, etc. 
@@ -110,7 +99,7 @@ Task: distances
 Project: /root/miga-data/test_clade
 Dataset: qG_P_putida_u1
 ```
-Other headings (Ribosomal RNA (small subunit), Quality (essential genes) and Gene prediction)) allow you to download files in gz or Rdata compressed format. Reports are also available under the first two of these. Under Ribosomal RNA, Feature locations gives the position within the genome of each 16S rRNA gene sequence. Under Quality, Full report gives the number of essential genes found, which have multiple copies, and a list of the missing essential genes.
+Other headings (Ribosomal RNA (small subunit), Quality (essential genes) and Gene prediction)) allow you to download files in gz or Rdata compressed format. Reports are also available under the first two of these. Under Ribosomal RNA, Feature locations gives the position within the genome of each 16S rRNA gene sequence,a nd the Classify with RDP button works. Under Quality, Full report gives the number of essential genes found, which have multiple copies, and a list of the missing essential genes.
 
 
 
