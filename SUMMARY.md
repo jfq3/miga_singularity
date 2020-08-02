@@ -6,9 +6,9 @@
 
 * [Running MiGA Interactively](interactive_projects.md)
   * [Runing a Genome Project](hpcc_genome_project.md)
-  * [Classify a Genome](hpcc_classify-a-genome.md)
+  * [Classify a Genome](hpcc_classify_a_genome.md)
   * [Running a Clade Project](hpcc_clade_project.md)
-  * [Assemble a Genome](hpcc_assemble-a-genome.md)
+  * [Assemble a Genome](hpcc_assemble_a_genome.md)
 
 * [Submitting MiGA Jobs](submitting_miga_jobs.md)
 
