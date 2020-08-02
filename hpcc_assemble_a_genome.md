@@ -1,7 +1,5 @@
 # Running an Assembly Project Interactively
 
-In most cases you will want to run MiGA by submitting batch jobs. But to gain some experience and see how thing work, you can run the following example interactively.  
-
 Log into the HPCC with your user name and password. 
 
 Create a directory for your reads and put them in it. For this exercise we will start with trimmed fasta reads. 

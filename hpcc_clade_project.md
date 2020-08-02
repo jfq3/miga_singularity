@@ -1,7 +1,5 @@
 # Run an Clade Project Interactively
 
-In most cases you will want to run MiGA by submitting batch jobs. But to gain some experience and see how thing work, you can run the following example interactively.  
-
 Log into the HPCC with your user name and password.  
 
 Create a directory for some example data and put some genomes in it. For example, assuming you start from your home directory, the following commands will place several *Dehalococoides* genomes in the directory `~/dehalo_genomes`:  
