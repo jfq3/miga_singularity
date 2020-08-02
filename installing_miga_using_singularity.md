@@ -1,4 +1,4 @@
-# Installing
+# Installing MiGA
 
 Log into the HPCC with your user name and password.  
 
