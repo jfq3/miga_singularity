@@ -26,4 +26,5 @@ miga init
 ```
 When this command is run to initialize MiGA, all dependencies will be configurated automatically except for several optional features and system parameters that need to be manually configured, such as MyTaxa. MyTaxa is not includedin this version because it would make the image size too large. So please type “no” when the system asks if you want to use MyTaxa. Also, please type “bash” when the system asks how to submit jobs. For all other questions, accept the defaults by entering `Enter`.
 
-MiGA is now installed in your home directory. Close your connection to the HPCC.
+MiGA is now installed in your home directory. Close your connection to the HPCC. You must start a new connection before you can use MiGA.
+
