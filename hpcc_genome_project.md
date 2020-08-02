@@ -26,13 +26,10 @@ singularity shell MiGA
 miga new -P ~/pseudo -t genomes
 cd pseudo
 ```
-The `-t` argument is needed to specify what kind of genomes you are working with.  Acceptable types are :  
+The `-t` argument is needed to specify what kind of project you are running.  Acceptable types are :  
 
-- `popgenome` for Metagenome-Assembled Genomes
-- `scgenome` for Single-Cell Amplified Genomes
-- `genomes` for the genomes from isolates
-
-**Problem: It seems only genomes is actually accepted.**
+- `genomes` for genomes in general
+- `clade` for closely related genomes
 
 For this example, we are using genomes from isolates.  
 
