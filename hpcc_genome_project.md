@@ -100,4 +100,4 @@ Exit the MiGA singularity container with:
 ```
 exit
 ```
-See the section "Exploting Results" for how to access the results of your project.
+See the section "Exploring Results" for how to access the results of your project.
