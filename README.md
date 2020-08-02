@@ -1,14 +1,9 @@
 # miga_singularity
 
-I have not given logical names to my files. So to explain:
+Explain use of singularity to install MiGA Docker container on HPCC.
 
 Related to installilng and running MiGA on MSU's HPCC:
-- installing miga as_a_singularity.md
-- interactive_example.md
+- installing_miga_using_singularity.md
+- hpcc_genome_project.md
+- hpcc_clade_project.md
 
-Related to installing MiGA on a Windows PC:
-- Installing_docker_in_windows.md
-- Installing_miga-web.md
-- run_clade_project.md
- 
-./data/pseudomonads.zip - four genomes used in examples
