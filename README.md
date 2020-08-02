@@ -6,3 +6,5 @@ These instructions are for installing MiGA in a Singularity container from a Doc
 - The Docker API client acts through the docker daemon so that resource requests made by submission script (e.g. Slurm) and actual resource used do not match. Singularity containers instead run as child processes, i.e. without a daemon, so Slurm resource requests are honored. 
 
 While these instructions are written for installing MiGA in a user's home directory on Michigan State University's HPCC, they should work on any cluster including Singularity.
+
+Also included are tutorials for how to run several project types, and how to submit jobs to the cluster.
