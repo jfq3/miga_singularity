@@ -26,7 +26,7 @@ singularity shell MiGA
 miga new -P ~/dehalo -t clade
 cd dehalo
 ```
-The `-t` argument is needed to specify what kind of genomes you are working with.  Acceptable types are :  
+The `-t` argument is needed to specify what kind of project you are running.  Acceptable types are :  
 
 - `genomes` for the genomes from isolates
 - `clade` for genomes of closely related species
@@ -80,7 +80,7 @@ GCF_002007845_1_ASM200784v1_genomic  -          -              -             -  
 GCF_004684285_1_ASM468428v1_genomic  -          -              -             -              done      done  done             done  done    done         queued     queued    queued
 ```
 
-When all entries in the stat column read "done," the project is finished.
+When all entries in the stats column read "done," the project is finished.
 
 Stop the daemon with the command:
 
