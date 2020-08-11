@@ -67,7 +67,7 @@ And you can monitor the job progress by entering:
 ```
 miga ls -P . -p
 ```
-This should give someting like:
+This should give something like:
 
 ```
 name           raw_reads  trimmed_reads  read_quality  trimmed_fasta  assembly  cds   essential_genes  ssu   mytaxa  mytaxa_scan  distances  taxonomy  stats
