@@ -21,7 +21,7 @@ cd
 mkdir test_assembly
 ```
 
-Still from your home directory, start MiGA, move into the projectcreate a new project named `test_assembly`, and move into the directory:  
+Still from your home directory, start MiGA, create a new project named `test_assembly`, and move into the project directory:  
 
 ```
 singularity shell MiGA
@@ -46,8 +46,10 @@ For the input flag (-i), supported inputs include:
 Launch the daemon to start MiGA processing your data:  
 
 ```
-miga daemon start -P .
+miga daemon start -P . --shutdown-when-done
+
 ```
+The `shutdown-when-done` arguement automatically stops the daemon when processing is finished. 
 
 After the job starts, you can display the information about the job:  
 
@@ -73,9 +75,9 @@ name                raw_reads  trimmed_reads  read_quality  trimmed_fasta  assem
 A_capsulatum_reads  -          -              -             done           queued    queued  queued           queued  queued  queued       queued     queued    queued
 
 ```
-Because the datasets submitted were trimmed reads, trimmed_fasta is the first column to have entries. When all entries under the stats column read "done," processing is finished.
+Because the dataset submitted consisted of trimmed reads, trimmed_fasta is the first column to have entries. When all entries under the stats column read "done," processing is finished.
 
-Stop the daemon with the command:
+If you did not use the "shutdown-when-done" argument when starting the daemon, you can stop it with the command:
 
 ```
 miga daemon stop -P .
@@ -87,3 +89,4 @@ Exit the MiGA singularity container with:
 exit
 ```
 See the section "Exploring Results" for how to access the results of your project.
+
