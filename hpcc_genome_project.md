@@ -30,7 +30,7 @@ singularity shell MiGA
 miga new -P ~/pseudo -t genomes
 cd pseudo
 ```
-The `-t` argument is needed to specify what kind of project you are running.  Acceptable types are :  
+You can safey ignore any warning about a bind mount. The `-t` argument is needed to specify what kind of project you are running.  Acceptable types are :  
 
 - `genomes` for genomes in general
 - `clade` for closely related genomes
