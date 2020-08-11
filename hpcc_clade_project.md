@@ -41,10 +41,10 @@ miga add -P . -t genome -i assembly ~/dehalo_genomes/*.fna -m run_mytaxa_scan=fa
 Launch the daemon to start MiGA processing your data:  
 
 ```
-miga daemon start -P .
+miga daemon start -P . --shutdown-when-done
 ```
 
-After the job starts, you can display the project information:  
+The shutdown-when-done argument automatically stops the daemon when processing is complete. After the job starts, you can display the project information with the command:  
 
 ```
 miga about -P .
@@ -80,7 +80,8 @@ GCF_004684285_1_ASM468428v1_genomic  -          -              -             -  
 
 When all entries in the stats column read "done," the project is finished.
 
-Stop the daemon with the command:
+If you did not use the --shutdown-when-done command when starting the daemon, you can stop it with:
+
 
 ```
 miga daemon stop -P .
