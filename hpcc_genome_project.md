@@ -11,6 +11,12 @@ wget https://github.com/jfq3/data_sets/raw/master/Pseudomonas_genomes/pseudomona
 tar xzf pseudomonads.tar.gz
 rm pseudomonads.tar.gz
 ```
+Change the extension for one of the files from fasta to fna. For example, 
+
+```
+mv P_aeruginosa.fasta P_aeruginosa.fna
+```
+
 Create a directory for your project in your home directory:  
 
 ```
@@ -31,27 +37,19 @@ The `-t` argument is needed to specify what kind of project you are running.  Ac
 
 For this example, we are using genomes from isolates.  
 
-Add a database as the reference for your project. The database on the HPCC at MSU is:  
-
-`/mnt/research/rdp/public/database/TypeMat/TypeMat_Lite`
-
-so the command to add the reference database is:  
+Add your datasets ending with fasta to the MiGA project. In doing this, turn off mytaxa scan and distances , as in the command below. There must be no space after the comma(s) in the items listed for the -m flag or an error will occur. Here the -t flag specifies the type of genome being added to the project. The -i flag specifies that the datasets being uploaded are assembled genomes.
 
 ```
-miga edit -P . -m "/mnt/research/rdp/public/database/TypeMat/TypeMat_Lite"
-```
-
-Add your data set to the MiGA project. In doing this, turn off mytaxa scan and make sure distances is turned on, as in the command below. If desitred, calculating distances could be turned off by setting run_distances=false. There must be no space after the comma(s) in the items listed for the -m flag or an error will occur. Here the -i flag specifies that the datasets being uploaded are assembled genomes.
-
-```
-miga add -P . -t genome -i assembly ~/miga_genomes/*.fasta -m run_mytaxa_scan=false,run_distances=true
+miga add -P . -t genome -i assembly ~/miga_genomes/*.fasta -m run_mytaxa_scan=false,run_distances=false
 ```
 
 Launch the daemon to start MiGA processing your data:  
 
 ```
-miga daemon start -P .
+miga daemon start -P . --shutdown-when-done
 ```
+
+The "shutdown-when-done" argument automatically stops the daemon when processing is complete.
 
 After the job starts, you can display the information about the job:  
 
@@ -74,7 +72,6 @@ This should give someting like:
 ```
 name           raw_reads  trimmed_reads  read_quality  trimmed_fasta  assembly  cds   essential_genes  ssu   mytaxa  mytaxa_scan  distances  taxonomy  stats
          ----  ---------  -------------  ------------  -------------  --------  ---   ---------------  ---   ------  -----------  ---------  --------  -----
- P_aeruginosa  -          -              -             -              done      done  done             done  done    done         queued     queued    queued
 P_alcaligenes  -          -              -             -              done      done  done             done  done    done         queued     queued    queued
 P_fluorescens  -          -              -             -              done      done  done             done  done    done         queued     queued    queued
   P_mendocina  -          -              -             -              done      done  done             done  done    done         queued     queued    queued
@@ -84,7 +81,7 @@ P_fluorescens  -          -              -             -              done      
 ```
 Because the datasets submitted were assembled genomes, assembly is the first column to have entries. When all entries under the stats column read "done," processing is finished.
 
-Stop the daemon with the command:
+If you did not use the "shutdown-when-done" argument when starting the daemon, you can stop it with the command:
 
 ```
 miga daemon stop -P .
