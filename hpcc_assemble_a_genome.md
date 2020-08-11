@@ -29,7 +29,7 @@ miga new -P ~/test_assembly/ -t genomes
 cd test_assembly
 ```
 
-Add your data set to the MiGA project. In doing this, turn off mytaxa scan and distances, as in the command below. MyTaxa is not installed in this version of MiGA, and because ths project contains only one genome we cannot calculate distances. Here the -i flag specifies that the datasets being uploaded are trimmed reads.
+Add your data set to the MiGA project. In doing this, turn off mytaxa scan and distances, as in the command below. MyTaxa is not installed in this version of MiGA, and because this project contains only one genome we cannot calculate distances. Here the -i flag specifies that the dataset being uploaded consists of trimmed reads.
 
 ```
 miga add -P . -t genome -i trimmed_reads_single  ~/miga_cap/A_capsulatum_reads.fasta -m run_mytaxa_scan=false,run_distances=false
