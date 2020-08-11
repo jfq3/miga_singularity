@@ -80,7 +80,7 @@ GCF_004684285_1_ASM468428v1_genomic  -          -              -             -  
 
 When all entries in the stats column read "done," the project is finished.
 
-If you did not use the --shutdown-when-done command when starting the daemon, you can stop it with:
+If you did not use the --shutdown-when-done arguement when starting the daemon, you can stop it with:
 
 
 ```
