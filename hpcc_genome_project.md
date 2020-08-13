@@ -17,6 +17,8 @@ Change the extension for one of the files from fasta to fna. For example,
 mv P_aeruginosa.fasta P_aeruginosa.fna
 ```
 
+We will classify this renamed genome relative to the genomes in this project in the next exercise "Classify a Genome."
+
 Create a directory for your project in your home directory:  
 
 ```
@@ -37,10 +39,10 @@ You can safey ignore any warning about a bind mount. The `-t` argument is needed
 
 For this example, we are using genomes from isolates.  
 
-Add your datasets ending with fasta to the MiGA project. In doing this, turn off mytaxa scan and distances , as in the command below. There must be no space after the comma(s) in the items listed for the -m flag or an error will occur. Here the -t flag specifies the type of genome being added to the project. The -i flag specifies that the datasets being uploaded are assembled genomes.
+Add your datasets ending with fasta to the MiGA project. In doing this, turn off mytaxa scan and make sure distances is turned on, as in the command below. There must be no space after the comma(s) in the items listed for the -m flag or an error will occur. Here the -t flag specifies the type of genome being added to the project. The -i flag specifies that the datasets being uploaded are assembled genomes.
 
 ```
-miga add -P . -t genome -i assembly ~/miga_genomes/*.fasta -m run_mytaxa_scan=false,run_distances=false
+miga add -P . -t genome -i assembly ~/miga_genomes/*.fasta -m run_mytaxa_scan=false,run_distances=true
 ```
 
 Launch the daemon to start MiGA processing your data:  
