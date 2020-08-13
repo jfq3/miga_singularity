@@ -1,10 +1,10 @@
-# Submitting a MiGA Job to the Cluster
+# Submitting MiGA Jobs
 
 Below is an example submision script for running the same job as in the interactive genomes project. It assumes that the genomes to be processed are in the same directory, i.e. `~/miga_genomes`. The project directory is `~/miga_batch`. After starting the MiGA singularity container, the miga commands are the same as in the interactive example except for the flag to shut down the daemon when processing is done.
 
 Actual wall time for this example was ~ 22 minutes.
 
-```
+```text
 #!/bin/bash --login
 ########## SBATCH Lines for Resource Request ##########
 #SBATCH --time=03:00:00         # limit of wall clock time - how long the job will run (same as -t)
@@ -27,3 +27,4 @@ time miga daemon start -t -P . --shutdown-when-done
 exit
 EOF
 ```
+
