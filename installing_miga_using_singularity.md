@@ -8,7 +8,7 @@ Log into the HPCC with your user name and password.
 ssh  dev-intel18.i
 ```
 
-While in you home directory, create a singularitiy image of MiGa named miga using the comand:
+While in you home directory, create a singularitiy image of MiGA named MiGA using the command:
 
 ```text
 singularity build MiGA docker://fyuan277/miga_cli:v0.4t
