@@ -6,7 +6,7 @@ Create a directory for some example data and put some genomes in it. For example
 
 ```text
 mkdir miga_genomes
-cd mega_genomes
+cd miga_genomes
 wget https://github.com/jfq3/data_sets/raw/master/Pseudomonas_genomes/pseudomonads.tar.gz
 tar xzf pseudomonads.tar.gz
 rm pseudomonads.tar.gz
