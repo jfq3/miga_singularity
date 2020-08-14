@@ -21,7 +21,7 @@ cd ~/miga_batch
 
 singularity shell ~/MiGA << EOF
 miga new -P ~/miga_batch -t genomes
-miga edit -P . -m "/mnt/research/rdp/public/database/TypeMat/TypeMat_Lite"
+miga edit -P . -m "ref_project=/mnt/research/rdp/public/database/TypeMat/TypeMat_Lite"
 miga add -P . -t genome -i assembly ~/miga_genomes/*.fasta -m run_mytaxa_scan=false,run_distances=true
 time miga daemon start -t -P . --shutdown-when-done
 exit
