@@ -1,6 +1,6 @@
 # Classify a Genome
 
-For this exersise it is assumed that you have already run the Genome Project exercise. The project created in that exercise (`pseudo`) consisted of several _Psuedomonas_ genomes submitted as fasta files; one of the genome sequence files was renamed to have the extension `fna` so that it would not be included in the project. We will now classify that renamed genome file in relation to the genomes already in the project; _i.e._ `pseudo` will serve as our reference database in this exercise.
+For this exercise it is assumed that you have already run the Genome Project exercise. The project created in that exercise (`pseudo`) consisted of several _Psuedomonas_ genomes submitted as fasta files; one of the genome sequence files was renamed to have the extension `fna` so that it would not be included in the project. We will now classify that renamed genome file in relation to the genomes already in the project; _i.e._ `pseudo` will serve as our reference database in this exercise.
 
 Log into the HPCC with your user name and password and create a directory for your project.
 
@@ -91,5 +91,5 @@ subspecies  ?         0.49936788874842   *
 Significance at p-value below: *0.5, **0.1, ***0.05, ****0.01.
 
 ```
-This gives *P. alcaligenes* as the closest match among the reference genomes in `pseudo` and indicates that there is a very high probablility that the genome being classified is in the same family and maybe (p~0.18) in the same genus.
+This gives *P. alcaligenes* as the closest match among the reference genomes in `pseudo` and indicates that there is a very high probability that the genome being classified is in the same family and maybe (p~0.18) in the same genus.
 
