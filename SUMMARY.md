@@ -6,7 +6,7 @@
   * [Running a Genome Project](interactive_projects/hpcc_genome_project.md)
   * [Classify a Genome](interactive_projects/hpcc_classify_intro.md)
     * [Using Your Own Project](interactive_projects/hpcc_use_reference_project.md)
-    * [Using a Reference Database](hpcc_use_reference_database.md)
+    * [Using a Reference Database](interactive_projects/hpcc_use_reference_database.md)
   * [Running a Clade Project](interactive_projects/hpcc_clade_project.md)
   * [Assemble a Genome](interactive_projects/hpcc_assemble_a_genome.md)
 * [Submitting MiGA Jobs](submitting_miga_jobs.md)
