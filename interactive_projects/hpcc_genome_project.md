@@ -18,7 +18,7 @@ Change the extension for one of the files from fasta to fna. For example,
 mv P_aeruginosa.fasta P_aeruginosa.fna
 ```
 
-We will classify this renamed genome relative to the genomes in this project in the next exercise "Classify a Genome."
+We will classify this renamed genome relative to the genomes in this project in the next exercise **Classify a Genome**.
 
 Create a directory for your project in your home directory:
 
@@ -101,5 +101,5 @@ Exit the MiGA singularity container with:
 exit
 ```
 
-See the section "Exploring Results" for how to access the results of your project.
+See the section **Exploring Results** for how to access the results of your project.
 
