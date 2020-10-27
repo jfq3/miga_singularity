@@ -2,10 +2,10 @@
 
 Log into the HPCC with your user name and password.
 
-**IMPORTANT:** ssh to node dev-intel18.i. For some reason not understood, installation works only from this node.
+**IMPORTANT:** Installation may not work from all nodes. Initially it worked only from dev-intel18.i, but since the HPCC upgrade was completed, I have installed MiGA from dev-intel16. If you have trouble, try a different node and let John Quensen know your experieince. 
 
 ```text
-ssh  dev-intel18.i
+ssh  dev-intel18
 ```
 
 While in you home directory, create a singularitiy image of MiGA named MiGA using the command:
