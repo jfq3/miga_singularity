@@ -45,9 +45,11 @@ Lacunisphaera_limnophila        d:Bacteria p:Verrucomicrobia c:Opitutae o:Opitut
 ```
 
 Individual `*intax.txt` files for each genome can be found in directory  `~/miga_class/data/09.distances/05.taxonomy/`.  For example:
+
 ```
 less ~/miga_class/data/09.distances/05.taxonomy/Bifidobacterium_bifidum.intax.txt
 ```
+
 returns:
 
 ```
@@ -67,7 +69,7 @@ subspecies  ?                                                0.960990997377189
    dataset  Bifidobacterium scardovii JCM 12489 = DSM 13734  0.965570284256043
 
 Significance at p-value below: *0.5, **0.1, ***0.05, ****0.01.
-
+```
 
 
 Times reported for this project were (real = wall time):  
