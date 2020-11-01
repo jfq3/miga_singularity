@@ -12,7 +12,7 @@
   * [Assemble a Genome](interactive_projects/hpcc_assemble_a_genome.md)
 * [Submitting MiGA Jobs](submitting_miga_jobs.md)
     * [Installing TypeMat_Lite](submitted_projects/installing_typemat_lite.md)
-    * [Submitting a Genome Project](submitted_projects/)
+    * [Submitting a Genome Project](submitted_projects/submitted_genome_project.md)
     * [Adding Classification to a Genome Project](submitted_projects/)
     * [Submitting a Genome Project with Classification](submitted_projects/submitting_genome_with_classification.md)
     * [Submitting a Clade Project](submitted_projects/submitting_clade_project.md)
