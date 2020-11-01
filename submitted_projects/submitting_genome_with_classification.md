@@ -44,13 +44,13 @@ Gemmatimonas_aurantiaca d:Bacteria p:Gemmatimonadetes c:Gemmatimonadetes o:Gemma
 Lacunisphaera_limnophila        d:Bacteria p:Verrucomicrobia c:Opitutae o:Opitutales
 ```
 
-Individual `*intax.txt` files for each genome can be found in directory  `~/miga_class/data/09.distances/05.taxonomy/`.  For example:
+Individual `*intax.txt` files for each genome can be found in directory  `~/miga_class/data/09.distances/05.taxonomy/`.  For example:  
 
 ```
 less ~/miga_class/data/09.distances/05.taxonomy/Bifidobacterium_bifidum.intax.txt
 ```
 
-returns:
+returns:  
 
 ```
 Closest relative: Bifidobacterium_scardovii_JCM_12489___DSM_13734_GCA_000770985 with AAI: 68.94928718008717.
