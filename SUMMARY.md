@@ -13,6 +13,7 @@
 * [Submitting MiGA Jobs](submitting_miga_jobs.md)
     * [Installing TypeMat_Lite](submitted_projects/installing_typemat_lite.md)
     * [Submitting a Genome Project](submitted_projects/submitting_genome_project.md)
+    * [Adding a Query Genome to a Genomes Project](submitted_projects/submitting_add_query.md)
     * [Adding Classification to a Genome Project](submitted_projects/submitting_add_classification.md)
     * [Submitting a Genome Project with Classification](submitted_projects/submitting_genome_with_classification.md)
     * [Submitting a Clade Project](submitted_projects/submitting_clade_project.md)
