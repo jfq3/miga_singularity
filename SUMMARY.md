@@ -1,7 +1,8 @@
-# Table of contents
+# Table of Contents
 
 * [MiGA for High Performance Clusters](README.md)
 * [Installing MiGA using Singularity](installing_miga_using_singularity.md)
+* [Get Example Data](get_data_files.md)
 * [Running MiGA Interactively](interactive_projects/README.md)
   * [Running a Genome Project](interactive_projects/hpcc_genome_project.md)
   * [Classify a Genome](interactive_projects/hpcc_classify_intro.md)
@@ -10,4 +11,10 @@
   * [Running a Clade Project](interactive_projects/hpcc_clade_project.md)
   * [Assemble a Genome](interactive_projects/hpcc_assemble_a_genome.md)
 * [Submitting MiGA Jobs](submitting_miga_jobs.md)
+    * [Installing TypeMat_Lite](submitted_projects/installing_typemat_lite.md)
+    * [Submitting a Genome Project](submitted_projects/)
+    * [Adding Classification to a Genome Project](submitted_projects/)
+    * [Submitting a Genome Project with Classification](submitted_projects/)
+    * [Submitting a Clade Project](submitted_projects/)
+    * [Submitting an Assembly Job](submitted_projects/)
 * [Exploring Results](exploring_results.md)
