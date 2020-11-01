@@ -14,7 +14,7 @@
     * [Installing TypeMat_Lite](submitted_projects/installing_typemat_lite.md)
     * [Submitting a Genome Project](submitted_projects/)
     * [Adding Classification to a Genome Project](submitted_projects/)
-    * [Submitting a Genome Project with Classification](submitted_projects/)
+    * [Submitting a Genome Project with Classification](submitted_projects/submitting_genome_with_classification.md)
     * [Submitting a Clade Project](submitted_projects/)
     * [Submitting an Assembly Job](submitted_projects/)
 * [Exploring Results](exploring_results.md)
