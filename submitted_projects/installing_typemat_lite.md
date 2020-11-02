@@ -19,5 +19,6 @@ The database is installed in the directory `~/.miga_db`. The resource requst sec
 cd
 singularity shell ~/MiGA << EOF
 miga download
+exit
 EOF
 ```
