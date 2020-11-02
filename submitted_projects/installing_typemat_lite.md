@@ -1,4 +1,4 @@
-This script is provided as a convenient way of obtaining the latest version of the TypeMat_Lite indexed reference database. This database contains more tha 13,500 genomes from type material as of August 2020. By attaching this database to a genome project, reference genomes submitted to the project are classified relative to the closest match in the database.
+This script is provided as a convenient way of obtaining the latest version of the TypeMat_Lite indexed reference database. As of August 2020, this database contains more than 13,500 genomes from type material. By attaching it to a genome project, reference genomes submitted to the project are classified relative to the closest match in the database.
 
 The database is installed in the directory `~/.miga_db`. The resource request section is for a SLURM job scheduler.
 
