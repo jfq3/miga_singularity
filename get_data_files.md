@@ -1,11 +1,40 @@
 # Get Data Files
 
-Data for the examples in this GitBook are available on GitHub at `https://github.com/jfq3/data_sets`. You will have to download them to your computer and then upload them to the cluster and decompress them. Using `wget` to retrieve them directly from GitHub does not work. In order to follow the scripts exactly, you need to arrange the files as in the following directory structure. Otherwise you will need to edit the scripts to point to the data files as you arrange them in your directory.
-
-Change the extension of one of the *Pseudomonas* files from fasta to fna. 
+Data for the exercises in this GitBook are available on GitHub at `https://github.com/jfq3/data_sets`. The bash script below downloads all of the data necessary for the exercises and puts them in a directory structure compatible with the example scripts. It also changes the extension of one of the pseudomonad genomes so that it may be set aside as a query genome for some of the exercises.
 
 ```
-$HOME/miga_genomes/
+#! /bin/bash
+
+# Get example data
+mkdir ~/miga_genomes
+cd ~/miga_genomes
+mkdir a_capsulatum
+mkdir dehalo
+mkdir misc
+mkdir pseudo
+cd a_capsulatum
+wget https://github.com/jfq3/data_sets/raw/master/A_capsulatum_reads.fasta.gz
+gzip -d A_capsulatum_reads.fasta.gz
+rm A_capsulatum_reads.fasta.gz
+cd ../dehalo
+wget https://github.com/jfq3/data_sets/raw/master/Dehalococcoides_genomes/dehalococcoides_genomes.tar.gz
+tar xzf dehalococcoides_genomes.tar.gz
+rm dehalococcoides_genomes.tar.gz
+cd ../misc
+wget https://github.com/jfq3/data_sets/raw/master/Miscellaneous_genomes/miscellaneous.tar.gz
+tar xzf miscellaneous.tar.gz
+rm miscellaneous.tar.gz
+cd ../pseudo
+wget https://github.com/jfq3/data_sets/raw/master/Pseudomonas_genomes/pseudomonads.tar.gz
+tar xzf pseudomonads.tar.gz
+mv P_aeruginosa.fasta P_aeruginosa.fna
+rm pseudomonads.tar.gz
+```
+
+The resulting files and directory strucure are:
+
+```
+$HOME/miga_genomes
 ├── a_capsulatum
 │   └── A_capsulatum_reads.fasta
 ├── dehalo
@@ -29,12 +58,12 @@ $HOME/miga_genomes/
 │   ├── Cytophaga_hutchinsonii.fasta
 │   ├── Gemmatimonas_aurantiaca.fasta
 │   └── Lacunisphaera_limnophila.fasta
-├── pseudo
-│   ├── P_aeruginosa.fna
-│   ├── P_alcaligenes.fasta
-│   ├── P_fluorescens.fasta
-│   ├── P_mendocina.fasta
-│   ├── P_putida.fasta
-│   ├── P_stutzeri.fasta
-│   └── P_syringae.fasta
+└── pseudo
+    ├── P_aeruginosa.fna
+    ├── P_alcaligenes.fasta
+    ├── P_fluorescens.fasta
+    ├── P_mendocina.fasta
+    ├── P_putida.fasta
+    ├── P_stutzeri.fasta
+    └── P_syringae.fasta
 ```
