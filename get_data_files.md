@@ -1,6 +1,8 @@
 # Get Data Files
 
-Data for the examples in this GitBook are available on GitHub at `https://github.com/jfq3/data_sets`. You will have to download them to your computer and then upload them to the cluster and decompress them. Using `wget` to retrieve them directly from GitHub does not work. In order to follow the scripts exactly, you need to arrange the files as in the following directory structure. Otherwise you will need to edit the scripts to point to the data files as you arrange them in your directory. 
+Data for the examples in this GitBook are available on GitHub at `https://github.com/jfq3/data_sets`. You will have to download them to your computer and then upload them to the cluster and decompress them. Using `wget` to retrieve them directly from GitHub does not work. In order to follow the scripts exactly, you need to arrange the files as in the following directory structure. Otherwise you will need to edit the scripts to point to the data files as you arrange them in your directory.
+
+Change the extension of one of the *Pseudomonas* files from fasta to fna. 
 
 ```
 $HOME/miga_genomes/
