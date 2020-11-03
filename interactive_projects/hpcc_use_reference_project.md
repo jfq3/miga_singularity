@@ -1,14 +1,16 @@
 # Classify a Query Genome Against a Genome Project
 
-For this exercise it is assumed that you have already run the **Genome Project** exercise. The project created in that exercise (`pseudo`) consisted of several _Psuedomonas_ genomes submitted as fasta files; one of the genome sequence files was renamed to have the extension `fna` so that it would not be included in the project. We will now classify that renamed genome file in relation to the genomes already in the project; _i.e._ `pseudo` will serve as our reference genome project in this exercise.
+For this exercise it is assumed that you have already run the **Running a Genome Project** exercise. The project created in that exercise (`pseudo`) consisted of 6 _Psuedomonas_ genomes submitted as fasta files. A seventh *Psudomonas* genome in the same directory had the extension `fna` so that it would not be included in the project when we added all genome files ending with `fasta`. We will now classify this seventh *Psuedomonas* genome in relation to the genomes already in the project; _i.e._ `pseudo` will serve as our reference genome project in this exercise.
 
-Log into the HPCC with your user name and password and create a directory for your project.
+Log into the HPCC with your user name and password if you have not done so already.
 
-Add the dataset ending with fna to the MiGA project `pseudo`. Here the -D flag gives the name for the one genome being added. The -t flag specifies the type of genome being added to the project. The --query flag (-q is also acceptable) indicates that the genome being added is a query genome (rather than a reference genome, the default). The -i flag specifies that the dataset being uploaded is an assembled genome.
+Add the dataset ending with `fna` to the MiGA project `pseudo`. Here the -D flag gives the name for the one genome being added. The -t flag specifies the type of genome being added to the project. The --query flag (-q is also acceptable) indicates that the genome being added is a query genome (rather than a reference genome, the default). The -i flag specifies that the dataset being uploaded is an assembled genome.
 
 ```
+cd
 singularity shell MiGA # If not already running.
-miga add -P ~/pseudo -D P_aeruginosa -t genome --query -i assembly ~/miga_genomes/P_aeruginosa.fna
+cd pseudo
+miga add -P ~/pseudo -D P_aeruginosa -t genome --query -i assembly ~/miga_genomes/pseudo/P_aeruginosa.fna
 ```
 
 **Note:** It is possible to add more than one genome to a project in this way, but in that case the -D flag cannot be used. Instead a -r flag giving a regex expression for the extraction of the genome names from the names of the files being submitted must be given. This is beyond the scope of this tutorial.
