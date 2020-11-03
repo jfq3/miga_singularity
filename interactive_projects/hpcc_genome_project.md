@@ -7,6 +7,8 @@ This exercise takes approximately 30 minutes to run.
 Log into the HPCC with your user name and password. From your home directory, start MiGA, create a new project named `pseudo`, and move into the `pseudo` directory:
 
 ```
+cd
+mkdir pseudo
 singularity shell MiGA
 miga new -P ~/pseudo -t genomes
 cd pseudo
