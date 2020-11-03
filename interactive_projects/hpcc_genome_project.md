@@ -1,35 +1,12 @@
 # Running a Genome Project
 
-Log into the HPCC with your user name and password.
+For this exercise 6 *Psuedomonas* genomes with the file extension `fasta` should be in the directory `$HOME/miga_genomes/pseudo`. This will be the case if you followed the instructions in the section **Get Example Data**. Otherwise you will have to make adjustments to the commands below.
 
-Create a directory for some example data and put some genomes in it. For example, assuming you start from your home directory, the following commands will place several _Psuedomonas_ genomes in the directory `~/miga_genomes`:
+This exercise takes approximately 30 minutes to run.
 
-```text
-mkdir miga_genomes
-cd miga_genomes
-wget https://github.com/jfq3/data_sets/raw/master/Pseudomonas_genomes/pseudomonads.tar.gz
-tar xzf pseudomonads.tar.gz
-rm pseudomonads.tar.gz
+Log into the HPCC with your user name and password. From your home directory, start MiGA, create a new project named `pseudo`, and move into the `pseudo` directory:
+
 ```
-
-Change the extension for one of the files from fasta to fna. For example,
-
-```text
-mv P_aeruginosa.fasta P_aeruginosa.fna
-```
-
-We will classify this renamed genome relative to the genomes in this project in the next exercise **Classify a Genome**.
-
-Create a directory for your project in your home directory:
-
-```text
-cd
-mkdir pseudo
-```
-
-Still from your home directory, start MiGA, create a new project named `pseudo`, and move into the pseudo directory:
-
-```text
 singularity shell MiGA
 miga new -P ~/pseudo -t genomes
 cd pseudo
@@ -44,8 +21,8 @@ For this example, we are using genomes from isolates.
 
 Add your datasets ending with fasta to the MiGA project. In doing this, turn off mytaxa scan and make sure distances is turned on, as in the command below. There must be no space after the comma\(s\) in the items listed for the -m flag or an error will occur. Here the -t flag specifies the type of genome being added to the project. The -i flag specifies that the datasets being uploaded are assembled genomes.
 
-```text
-miga add -P . -t genome -i assembly ~/miga_genomes/*.fasta -m run_mytaxa_scan=false,run_distances=true
+```
+miga add -P . -t genome -i assembly ~/miga_genomes/pseudo/*.fasta -m run_mytaxa_scan=false,run_distances=true
 ```
 
 Launch the daemon to start MiGA processing your data:
