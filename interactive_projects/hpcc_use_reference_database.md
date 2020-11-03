@@ -85,7 +85,7 @@ Significance at p-value below: *0.5, **0.1, ***0.05, ****0.01.
 
 ```
 
-# Include classification in a new project
+## Include classification in a new project
 
 Create a new project and add reference genomes to it. Then, **BEFORE** starting the daemon, edit the project to include a link to the reference database. The remaining steps are as above:
 
