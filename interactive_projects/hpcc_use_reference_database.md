@@ -1,5 +1,3 @@
-# Classify Reference Genomes Against a Reference Database
-
 There are several ways to classify reference genomes using a reference database. The `classify_wf` command automates several steps including downloading a reference database (if one is not found in th default directory), creating a new project, and controlling the daemon. Depending on the number of genomes and whether or not a reference database is already available, this method can take a significant amount of time and the terminal is not usable while the process is running. Thus it is best to submit such a job to the cluster (see the section on **Submitting MiGA Jobs** for examples). Also of note, several steps typically included in processing genomes are skipped when using `classify_wf`.
 
 Alternatively, a reference database can be attached to a project when (or after) creating it and the taxonomy step will be included when the project is run (or re-run). In either of these cases, it is necessary to first obtain the reference database.
