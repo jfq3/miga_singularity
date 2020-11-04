@@ -2,7 +2,6 @@ It is possible to classify reference genomes already in a project. You so this b
 
 The following script will classify the genomes submitted in the previous project.  
 
-
 ```
 #!/bin/bash --login
 ########## SBATCH Lines for Resource Request ##########
@@ -27,6 +26,7 @@ EOF
 Times reported for this project were (real = wall time):  
  _   | Time
 -----|---
-real | n
-user | n
-sys  | n
+real | 46m3.446s
+user | 228m5.471s
+sys  | 4m20.337s
+
