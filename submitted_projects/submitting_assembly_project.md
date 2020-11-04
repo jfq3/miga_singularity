@@ -57,5 +57,5 @@ Times reported for this project were (real = wall time):
 -----|---
 real | 9m43.201s
 user | 9m18.502s
-sys  | 9m18.502s
+sys  | 0m8.999s
 
