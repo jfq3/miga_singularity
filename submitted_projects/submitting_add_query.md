@@ -9,7 +9,7 @@ Added P. aereuginosa as a query genome.
 #SBATCH --time=02:00:00         # limit of wall clock time - how long the job will run (same as -t)
 #SBATCH --nodes=1               # number of different nodes - could be an exact number or a range of nodes (same as -N)
 #SBATCH --ntasks=1              # number of tasks - how many tasks (nodes) that you require (same as -n)
-#SBATCH --cpus-per-task=10      # number of CPUs (or cores) per task (same as -c)
+#SBATCH --cpus-per-task=12      # number of CPUs (or cores) per task (same as -c)
 #SBATCH --mem-per-cpu=2G        # memory required per allocated CPU (or core) - amount of memory (in bytes)
 #SBATCH --job-name pseudo      # you can give your job a name for easier identification (same as -J)
 

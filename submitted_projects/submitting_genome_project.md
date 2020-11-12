@@ -2,15 +2,13 @@
 
 Below is an example submision script for running the same job as in the interactive genomes project. It assumes that the genomes to be processed are in the same directory, *i.e.* `~/miga_genomes/pseudo`. The project directory is `~/miga_batch`. After starting the MiGA singularity container, the miga commands are the same as in the interactive example. The << EOF ... EOF construct feeds these lines to miga one at a time and enables exiting the program earlier than the time requested if it finishes sooner.
 
-This example takes approximately 30 minutes to run.
-
 ```text
 #!/bin/bash --login
 ########## SBATCH Lines for Resource Request ##########
 #SBATCH --time=01:00:00         # limit of wall clock time - how long the job will run (same as -t)
 #SBATCH --nodes=1               # number of different nodes - could be an exact number or a range of nodes (same as -N)
 #SBATCH --ntasks=1              # number of tasks - how many tasks (nodes) that you require (same as -n)
-#SBATCH --cpus-per-task=10      # number of CPUs (or cores) per task (same as -c)
+#SBATCH --cpus-per-task=12      # number of CPUs (or cores) per task (same as -c)
 #SBATCH --mem-per-cpu=2G        # memory required per allocated CPU (or core) - amount of memory (in bytes)
 #SBATCH --job-name genomes      # you can give your job a name for easier identification (same as -J)
 
