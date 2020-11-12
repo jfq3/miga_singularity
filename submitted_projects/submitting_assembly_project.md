@@ -55,7 +55,7 @@ The assembled genome can be retrieved as `~/test_assemble/data/05.assembly/A_cap
 Times reported for this project were (real = wall time):  
  _   | Time
 -----|---
-real | 9m43.201s
-user | 9m18.502s
-sys  | 0m8.999s
+real | 8m42.971s
+user | 8m26.007s
+sys  | 0m05.480s
 

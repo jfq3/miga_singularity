@@ -76,6 +76,6 @@ Times reported for this project were (real = wall time):
 
  _   | Time
 -----|---
-real | 94m39.246s
-user | 414m44.775s
-sys  | 7m26.888s
+real | 57m35.1466s
+user | 250m01.993s
+sys  | 3m12.277s

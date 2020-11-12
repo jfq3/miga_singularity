@@ -54,6 +54,6 @@ The interpretation is that the query genome *P. aeruginosa*'s closeset match amo
 Times reported for this project were (real = wall time):  
  _   | Time
 -----|---
-real | 1m27.936s
-user | 1m21.115s
-sys  | 0m2.840s
+real | 1m11.631s
+user | 1m05.713s
+sys  | 0m02.269s

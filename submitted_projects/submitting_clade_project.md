@@ -50,7 +50,7 @@ A tree of the genomes in Newick format can be obtained from `~/miga_clade/data/1
 Times reported for this project were (real = wall time):  
  _   | Time
 -----|---
-real | 92m50.255s
-user | 120m54.491s
-sys  | 2m35.648s
+real | 20m45.196s
+user | 95m26.944s
+sys  | 1m03.999s
 

@@ -26,7 +26,7 @@ EOF
 Times reported for this project were (real = wall time):  
  _   | Time
 -----|---
-real | 46m3.446s
-user | 228m5.471s
-sys  | 4m20.337s
+real | 45m40.816s
+user | 226m55.092s
+sys  | 4m12.932s
 
