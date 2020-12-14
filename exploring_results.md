@@ -79,7 +79,7 @@ MiGA was originally provided as a web-based program, and the results were delive
 
 <li>If you have not already done so, install MiGA-Web:</li>
 
-<ol type="a">
+<ul type="a">
 <li type="a">Open a terminal and enter the following, one line at a time:</li>
 <pre><code>docker pull fyuan277/miga-web:v1.3
 docker run -p 9090:3000 -it -v C:/miga-web:/root/miga-data -v db_volume:/miga-web/db --name miga-web fyuan277/miga-web:v1.3 /bin/bash
@@ -92,7 +92,7 @@ bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 <li type="a">Open a new terminal and enter:</li>
 <pre><code>docker stop miga-web</code></pre>
 <li type="a">Close the terminal.</li>
-</ol>
+</ul>
 
 <li>Compress the results on the cluster: </li>
 
