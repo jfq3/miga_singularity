@@ -76,7 +76,8 @@ MiGA was originally provided as a web-based program, and the results were delive
 <ol>
 <li> If you have not already done so, install the <a href="https://www.docker.com/products/docker-desktop">Docker Version</a> appropriate to your system (Windows, Mac OS or Linux).</li>
 <li>If you have not already done so, install MiGA-Web:</li>
-<p>a. Open a teminal and enter the following, one line at a time:</p>
+<ul>
+<p>a. Open a terminal and enter the following, one line at a time:</p>
 <pre><code>docker pull fyuan277/miga-web:v1.3
 docker run -p 9090:3000 -it -v C:/miga-web:/root/miga-data -v db_volume:/miga-web/db --name miga-web fyuan277/miga-web:v1.3 /bin/bash
 cd miga-web/
@@ -98,7 +99,7 @@ bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 <pre><code>cd project_directory</code>
 <code>miga archive -o project_name.tar.gz -P .</code>
 </pre>
-<p>The miga archive option has the advantage that unecessary files are not included in the archive. Thus the archive file is smaller and the MiGA results take up less drive space on your compurter.</P>
+<p>The miga archive option has the advantage that unnecessary files are not included in the archive. Thus the archive file is smaller and the MiGA results take up less drive space on your computer.</P>
 </ul>
 <li>Download the compressed file to the project directory on your computer and decompress it. The installation commands above created the project directory as C:/miga-web.</li>
 <pre><code>tar xzf project_name.tar.gz</code></pre>
@@ -112,8 +113,8 @@ cd miga-web/
 export SECRET_KEY_BASE=`bundle exec rake secret`
 bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 </code></pre>
-<p>Leave the terminal running until you are finished browsing the results (see below).</p>
-<p>Open a web browser, enter "localhost:9090" as the URL and log into MiGA-Web.</p>
+<p>c. Leave the terminal running until you are finished browsing the results (see below).</p>
+<p>d. Open a web browser, enter "localhost:9090" as the URL and log into MiGA-Web.</p>
 </ul>
 <li>Link the project to MiGA-Web.</li>
 <p>a. Go to the Admin console page.</p>
