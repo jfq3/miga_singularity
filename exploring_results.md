@@ -122,7 +122,6 @@ bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 <p>c. Under the name of the project, click either "Link publicly" or "Link privately." The choice only affects where the project will be listed.
 <li>Open the project and browse the results. Get explanations for each item; the "Learn more" links take you directly to the appropriate section of the MiGA manual. The download links copy the item to your downloads directory.
 </li>
-</ol>
 After you have finished, end MiGA-Web as above after you installed it:
 <ul>
 <p>a. Enter control C into the terminal and close it.</p>
