@@ -129,3 +129,4 @@ After you have finished, end MiGA-Web as above after you installed it:
 <pre><code>docker stop miga-web</code></pre>
 <p>c. Close the terminal.</p>
 </ul>
+</ol>
