@@ -104,7 +104,7 @@ bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 <pre><code>cd project_directory</code>
 <code>miga archive -o project_name.tar.gz -P .</code>
 </pre>
-<p>The miga archive option has the advantage that unnecessary files are not included in the archive. Thus the archive file is smaller and the MiGA results take up less drive space on your computer.</P>
+<p>The miga archive option has the advantage that unnecessary files are not included in the archive. Thus the archive file is smaller and the MiGA results take up less drive space on your computer.</p>
 </ol>
 
 <li>Download the compressed file to the project directory on your computer and decompress it. The installation commands above created the project directory as C:/miga-web.</li>
