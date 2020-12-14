@@ -87,7 +87,7 @@ cd miga-web/
 export SECRET_KEY_BASE=`bundle exec rake secret`
 bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 </code></pre>
-<p>The docker run line creates the MiGA project directory as C:/miga-web on your computer. You may use a different directory name if you wish.
+<p>The docker run line creates the MiGA project directory as C:/miga-web on your computer. You may use a different directory name if you wish.</p>
 <li>Enter control C and close the terminal.</li>
 <li>Open a new terminal and enter:</li>
 <pre><code>docker stop miga-web</code></pre>
