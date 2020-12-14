@@ -73,13 +73,13 @@ Lacunisphaera_limnophila | Oleiharenicola_lentus_GCA_004118375 | 99.987524752475
 
 MiGA was originally provided as a web-based program, and the results were delivered via a web browser. You can view MiGA results generated on a cluster in the same manner if you first install the Docker version of MiGA-Web on your computer.  Steps are as follow:
 
-<ol>
+<ol type="A">
 
 <li> If you have not already done so, install the <a href="https://www.docker.com/products/docker-desktop">Docker Version</a> appropriate to your system (Windows, Mac OS or Linux).</li>
 
 <li>If you have not already done so, install MiGA-Web:</li>
 
-<ul type="a">
+<ol type="a">
 <li type="a">Open a terminal and enter the following, one line at a time:</li>
 <pre><code>docker pull fyuan277/miga-web:v1.3
 docker run -p 9090:3000 -it -v C:/miga-web:/root/miga-data -v db_volume:/miga-web/db --name miga-web fyuan277/miga-web:v1.3 /bin/bash
@@ -92,7 +92,7 @@ bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 <li type="a">Open a new terminal and enter:</li>
 <pre><code>docker stop miga-web</code></pre>
 <li type="a">Close the terminal.</li>
-</ul>
+</ol>
 
 <li>Compress the results on the cluster: </li>
 
