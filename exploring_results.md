@@ -1,4 +1,4 @@
-The tutorials include how to retrieve some of the more important results for each case: comparing relationships among genomes, finding clades, and evaluating genomes for completeness and contaimination. To retrieve more detailed information it is helpful to understand MiGA's directory structure. The following sub-directories are included under each project directory:
+The tutorials include how to retrieve some of the more important results for each case: comparing relationships among genomes, finding clades, and evaluating genomes for completeness and contaimination. To retrieve more detailed information it is helpful to understand MiGA's directory structure. The following sub-directories are included for each project under the project directory:
 
 ```
 .
@@ -43,104 +43,12 @@ The tutorials include how to retrieve some of the more important results for eac
 ```
 The sub-directories under data and beginning with 01 thorugh 10 correspond to MiGA's sequential steps in processing data beginning with raw paired fastq files loaded into 01.raw_reads. Not all steps need to be done. In most of the tutorials, we submitted assembled genomes in fasta format; they were loaded into 05.assembly and processing began there. In the genome assembly exercise, we began by loading already trimmed and quality filtered data into 04.trimmed. The genome projects ended with step 09.distances. Step 10.clades was performed only for the clade project. Each of these sub-directories beginning with 01 through 10 contain results for the associated data processing step.
 
-Some of the results are in text format (sometimes compressed), eg. tables, sequence files, gff files, nwk files.
-Others are in pdf format or Rdata format.
+Some of the results are in text format (sometimes compressed), eg. tables, sequence files, gff files, nwk files. Others are in pdf format or Rdata format. The information in each file is explained in the [MiGA workflow section](https://manual.microbial-genomes.org/part5/workflow) of the MiGA manual, and you may download the files individually using FileZilla or a similar program. 
 
-```
-05.assembly - sample_name.LargeContigs.fna - each genome sequence as a fasta file
-
-06.cds - compressed faa, fna and gff3 files for each genome. gff3 gives position of
-         gene in the genome and its orientation. Function is not annotated.
-
-07.annotation - 
-    01.function
-        01.essential
-            genome_name.ess (directory)
-                log - completeness, contamination, essential genes with multiple
-                    copies, missing essential genes
-                proteins.aln - aligned proteins sequences of essential genes
-                proteins.tar.gz - compressed unaligned protein sequences of essential
-                    genes
-            genome_name.ess.faa - essential genes (faa) with TIGRFAMs annotations
-            genome_name.json - includes completeness and contamination
-        02.ssu
-            genome_name.json - statistices on 16S sequences found
-            genome_name.ssu.all.fa.gz - all 16S sequences found with position annotations
-            genome_name.ssu.fa - one 16S sequence in fasta format
-            sample_name.ssu.gff.gz - position and orientation of 16S rRNA gene
-    02.taxonomy
-        01.mytaxa - mytaxa results (not included in the docker version of MiGA)
-    03.qa - mytaxa results (not included int he docker version of MiGA)
-
-08.mapping
-    01.read-ctq - empty
-    02.read.gene - empty
-
-09.distances
-    qG_genome_name_u1.intax.txt - classificationo of query genome against reference
-       genomes
-    qG_genome_name_u1.aai-medoids.tsv - reference genome at center of aai clade
-    qG_genome_name_u1.nwk - nwk tree file showing placement of querry genome among
-       reference genomes
-    qG_genome_name_u1.nwk.pdf - pdf of the nwk tree
-    
-    01.haai - miga-project.log - list of reference genomes
-            - miga-project.txt.gz - table of hAAI identities among reference genomes
-            - miga-project.hist - data for plotting distribution of hueristic aai
-                distances
-            - miga-project.Rdata - heuristic aai distances that can be read into R
-    02.aai  - miga-project.log - list of reference genomes
-            - miga-project.txt.gz - table of hAAI to AAI identities among reference
-                genomes
-            - miga-project.hist - data for plotting distribution of aai distances
-            - miga-project.Rdata - aai distances that can be read into R
-            
-    03.ani  - miga-project.log: list of reference genomes
-            - miga-project.txt.gz: table of ANI identites among reference genomes
-            - miga-project.hist: data for plotting distribution of ani distances
-            - miga-project.Rdata: ani distances that can be read into R
-            
-    04.ssu  - empty
-    
-    05.taxonomy - empty? version change? OR:
-                - genome_name.aai-medoids.tsv - distances to reference genomes
-                - genome_name.intax.txt - genome classification to ranks
-                - genome_name.nwk - placement of genome among reference genomes
-                - genome_name.nwk.pdf - placement of genome among reference genomes
-                
-10.clades - clade projects only
-    01.find - miga-project.aai90-clades: genomes belonging to each aai90 clade;
-                each line is a clade
-            - miga-project.ani95-clades: genomes belonging to each ani95 clase;
-                each line is a clade
-            - miga-project.ani95-medoids: genomes representing the medoid of each clade
-            - miga-project.proposed-clades: genomes belonging to each proposed clade;
-                each line is a clade
-    02.ani  - miga-project.ani.nwk
-            - miga-project.class.nwk
-            - miga-project.class.tsv
-            - miga-project.classif
-            - miga-project.dist.rdata
-            - miga-project.json
-            - miga-project.medoids
-            - miga-project.pdf
-            - directories miga-project.sc-nn/ where nn is a number
-    03.ogs  - 2
-            - miga-project.core-pan.pdf
-            - miga-project.core-pan.tsv
-            - miga-project.json
-            - miga-project.ogs
-            - miga-project.stats
-    04.phylogeny
-        01.essential: empty
-        02.core: empty
-    05.metadata: empty
-
-```
 
 ## A Taxonomy Summary Script
 
-Fang Yuan has written a script to summarize, for each genome in the project, the closest matching genome in a refernce database and the distances to it. To use it, move to the roject/data/09.distance/05.taxonomy directory and runthe following comamnds:
+For projects including classification, Fang Yuan has written a script to summarize the results. For each classified genome it determines the closest reference genome, the distances to it, and writest the reulsts to the file summary.csv. To use this script, move to the project/data/09.distance/05.taxonomy directory and run the following comamnds:
 
 ```
 wget https://github.com/jfq3/Miscellaneous-scripts/raw/master/miga_sumdb.sh
@@ -163,4 +71,61 @@ Lacunisphaera_limnophila | Oleiharenicola_lentus_GCA_004118375 | 99.987524752475
 
 ## Browse the results with MiGA-Web
 
-MiGA was orinally provided as a web-based program, and results were delivered via a web browser. You can do the same thing with results generated on a cluster. To do this, first install the Docker version of MiGA on your computer. Compress the results on the cluster into a tar.gz file. You can do this with either the tar command, or with the MiGA archive command. Download the tar.gz file to your computer and decompress it into the MiGA project directory on your computer. Open MiGA-Web and link to the downloaded project.
+MiGA was originally provided as a web-based program, and the results were delivered via a web browser. You can view MiGA results generated on a cluster in the same manner if you first install the Docker version of MiGA-Web on your computer.  Steps are as follow:
+
+<ol>
+<li> If you have not already done so, install the <a href="https://www.docker.com/products/docker-desktop">Docker Version</a> appropriate to your system (Windows, Mac OS or Linux).</li>
+<li>If you have not already done so, install MiGA-Web:</li>
+<p>a. Open a teminal and enter the following, one line at a time:</p>
+<pre><code>docker pull fyuan277/miga-web:v1.3
+docker run -p 9090:3000 -it -v C:/miga-web:/root/miga-data -v db_volume:/miga-web/db --name miga-web fyuan277/miga-web:v1.3 /bin/bash
+cd miga-web/
+export SECRET_KEY_BASE=`bundle exec rake secret`
+bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
+</code></pre>
+<p>The docker run line creates the MiGA project directory as C:/miga-web on your computer. You may use a different directory name if you wish.
+<p>b. Enter control C and close the terminal.</p>
+<p>c. Open a new terminal and enter:</p>
+<pre><code>docker stop miga-web</code></pre>
+<p>c. Close the terminal.</p>
+</ul>
+
+<li>Compress the results on the cluster: </li>
+<ul><p>a. Using tar:</p>
+<pre><code>cd project_directory</code>
+<code>tar czf project_name.tar.gz .</code></pre>
+<p>b. Using miga archive. With MiGA running on the cluster:</p>
+<pre><code>cd project_directory</code>
+<code>miga archive -o project_name.tar.gz -P .</code>
+</pre>
+<p>The miga archive option has the advantage that unecessary files are not included in the archive. Thus the archive file is smaller and the MiGA results take up less drive space on your compurter.</P>
+</ul>
+<li>Download the compressed file to the project directory on your computer and decompress it. The installation commands above created the project directory as C:/miga-web.</li>
+<pre><code>tar xzf project_name.tar.gz</code></pre>
+<li>Start Miga-Web on your computer.</li>
+<ul>
+<p>a. Start Docker desktop.</p>
+<p>b. Open a terminal and enter, one line at a time:</p>
+<pre><code>docker start miga-web
+docker exec -it miga-web /bin/bash
+cd miga-web/
+export SECRET_KEY_BASE=`bundle exec rake secret`
+bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
+</code></pre>
+<p>Leave the terminal running until you are finished browsing the results (see below).</p>
+<p>Open a web browser, enter "localhost:9090" as the URL and log into MiGA-Web.</p>
+</ul>
+<li>Link the project to MiGA-Web.</li>
+<p>a. Go to the Admin console page.</p>
+<p>b. Click on "Link existing projects"</p>
+<p>c. Under the name of the project, click either "Link publicly" or "Link privately." The choice only affects where the project will be listed.
+<li>Open the project and browse the results. Get explanations for each item; the "Learn more" links take you directly to the appropriate section of the MiGA manual. The download links copy the item to your downloads directory.
+</li>
+</ol>
+After you have finished, end MiGA-Web as above after you installed it:
+<ul>
+<p>a. Enter control C into the terminal and close it.</p>
+<p>b. Open a new terminal and enter:</p>
+<pre><code>docker stop miga-web</code></pre>
+<p>c. Close the terminal.</p>
+</ul>
