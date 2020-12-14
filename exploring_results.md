@@ -73,14 +73,14 @@ Lacunisphaera_limnophila | Oleiharenicola_lentus_GCA_004118375 | 99.987524752475
 
 MiGA was originally provided as a web-based program, and the results were delivered via a web browser. You can view MiGA results generated on a cluster in the same manner if you first install the Docker version of MiGA-Web on your computer.  Steps are as follow:
 
-<ol type="A">
+<ol>
 
 <li> If you have not already done so, install the <a href="https://www.docker.com/products/docker-desktop">Docker Version</a> appropriate to your system (Windows, Mac OS or Linux).</li>
 
 <li>If you have not already done so, install MiGA-Web:</li>
 
-<ol type="a">
-<li type="a">Open a terminal and enter the following, one line at a time:</li>
+<ul>
+<li>Open a terminal and enter the following, one line at a time:</li>
 <pre><code>docker pull fyuan277/miga-web:v1.3
 docker run -p 9090:3000 -it -v C:/miga-web:/root/miga-data -v db_volume:/miga-web/db --name miga-web fyuan277/miga-web:v1.3 /bin/bash
 cd miga-web/
@@ -88,60 +88,60 @@ export SECRET_KEY_BASE=`bundle exec rake secret`
 bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 </code></pre>
 <p>The docker run line creates the MiGA project directory as C:/miga-web on your computer. You may use a different directory name if you wish.</p>
-<li type="a">Enter control C and close the terminal.</li>
-<li type="a">Open a new terminal and enter:</li>
+<li>Enter control C and close the terminal.</li>
+<li>Open a new terminal and enter:</li>
 <pre><code>docker stop miga-web</code></pre>
-<li type="a">Close the terminal.</li>
-</ol>
+<li>Close the terminal.</li>
+</ul>
 
 <li>Compress the results on the cluster: </li>
 
-<ol>
-<li type="a">Using tar:</li>
+<ul>
+<li>Using tar:</li>
 <pre><code>cd project_directory</code>
 <code>tar czf project_name.tar.gz .</code></pre>
-<li type="a">Using miga archive. With MiGA running on the cluster:</li>
+<li>Using miga archive. With MiGA running on the cluster:</li>
 <pre><code>cd project_directory
 miga archive -o project_name.tar.gz -P .
 </code></pre>
 <p>The miga archive option has the advantage that unnecessary files are not included in the archive. Thus the archive file is smaller and the MiGA results take up less drive space on your computer.</p>
-</ol>
+</ul>
 
 <li>Download the compressed file to the project directory on your computer and decompress it. The installation commands above created the project directory as C:/miga-web.</li>
 <pre><code>tar xzf project_name.tar.gz</code></pre>
 
 <li>Start Miga-Web on your computer.</li>
 
-<ol>
-<li type="a">Start Docker desktop.</li>
-<li type="a">Open a terminal and enter, one line at a time:</li>
+<ul>
+<li>Start Docker desktop.</li>
+<li>Open a terminal and enter, one line at a time:</li>
 <pre><code>docker start miga-web
 docker exec -it miga-web /bin/bash
 cd miga-web/
 export SECRET_KEY_BASE=`bundle exec rake secret`
 bundle exec rails server -e production -b 0.0.0.0 -p 3000 Puma
 </code></pre>
-<li type="a">Leave the terminal running until you are finished browsing the results (see below).</li>
-<li type="a">Open a web browser, enter "localhost:9090" as the URL and log into MiGA-Web.</li>
-</ol>
+<li>Leave the terminal running until you are finished browsing the results (see below).</li>
+<li>Open a web browser, enter "localhost:9090" as the URL and log into MiGA-Web.</li>
+</ul>
 
 <li>Link the project to MiGA-Web.</li>
 
-<ol>
-<li type="a">Go to the Admin console page.</li>
-<li type="a">Click on "Link existing projects"</li>
-<li type="a">Under the name of the project, click either "Link publicly" or "Link privately." The choice only affects where the project will be listed.</li>
-</ol>
+<ul>
+<li>Go to the Admin console page.</li>
+<li>Click on "Link existing projects"</li>
+<li>Under the name of the project, click either "Link publicly" or "Link privately." The choice only affects where the project will be listed.</li>
+</ul>
 
 <li>Open the project and browse the results. Get explanations for each item; the "Learn more" links take you directly to the appropriate section of the MiGA manual. The download links copy the item to your downloads directory.
 
 <li>After you have finished, end MiGA-Web as above after you installed it:</li>
 
-<ol>
-<li type="a">Enter control C into the terminal and close it.</li>
-<li type="a">Open a new terminal and enter:</li>
+<ul>
+<li>Enter control C into the terminal and close it.</li>
+<li>Open a new terminal and enter:</li>
 <pre><code>docker stop miga-web</code></pre>
-<li type="a">Close the terminal.</li>
-</ol>
+<li>Close the terminal.</li>
+</ul>
 
 </ol>
